@@ -32,6 +32,11 @@ function addAuthGuard($rootScope, $location, $sessionStorage){
   });
 }
 
+function defaultRoute($urlRouterProvider){
+  $urlRouterProvider.otherwise('/home')
+}
+
+
 // services
 importAll(require.context('./services', false, /\.js$/));
 
@@ -46,6 +51,7 @@ importAll(require.context('./login', false, /.js$/))
 importAll(require.context('./home', true, /.js$/))
 
 angular.module('<%= moduleName %>')
+  .config(['$urlRouterProvider', defaultRoute])
   .run(['$rootScope', '$location', '$sessionStorage', addAuthGuard])
 /*
 // https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions

@@ -11,7 +11,7 @@ function LoginSvc($http, $sessionStorage, <%= moduleName %>Constants){
     })
       .then(res => {
         let ret = res.data || {};
-        if ( ret.status == 200 ) {
+        if ( res.status == 200 ) {
           ret = res.data;
           $sessionStorage.user = ret.user;
           ret.message = 'Login successful'

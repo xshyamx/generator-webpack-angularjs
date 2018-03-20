@@ -69,7 +69,8 @@ let webpackConfig = {
     port: 4200,
     proxy: {
       "/api": {
-        target: `http://${apiHost}:8080`,
+        target: `http://${apiHost}`,
+        changeOrigin: true,
         pathRewrite: { "^/api": "" },
         agent: proxyAgent
       }

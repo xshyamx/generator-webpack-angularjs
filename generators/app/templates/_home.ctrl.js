@@ -2,6 +2,7 @@
 var angular = require('angular');
 
 function homeCtrl($scope, $sessionStorage, $state, $filter) {
+  $scope.title = '<%= appName %>';
   $scope.navBar = require('../includes/navbar.html')
 }
 
