@@ -111,6 +111,11 @@ module.exports = class extends Generator {
       this.props
     );
     this.fs.copyTpl(
+      this.templatePath('_filter.js'),
+      this.destinationPath('src/filters/title-case.js'),
+      this.props
+    )
+    this.fs.copyTpl(
       this.templatePath('_login.service.js'),
       this.destinationPath('src/services/login.js'),
       this.props

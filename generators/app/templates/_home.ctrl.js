@@ -1,7 +1,7 @@
 'use strict';
 var angular = require('angular');
 
-function homeCtrl($scope, $sessionStorage, $state, $filter) {
+function homeCtrl($scope, $sessionStorage, $state, $filter, LoginSvc) {
   $scope.title = '<%= appName %>';
   $scope.navBar = require('../includes/navbar.html')
 }
@@ -17,7 +17,8 @@ homeCtrl.$inject = [
   '$scope',
   '$sessionStorage',
   '$state',
-  '$filter'
+  '$filter',
+  'LoginSvc'
 ]
 
 function routeConfig($stateProvider) {

@@ -41,7 +41,7 @@ function defaultRoute($urlRouterProvider){
 importAll(require.context('./services', false, /\.js$/));
 
 // filters
-//importAll(require.context('./filters', false, /\.js$/));
+importAll(require.context('./filters', false, /\.js$/));
 
 // directives
 //importAll(require.context('./directives', false, /\.js$/))
