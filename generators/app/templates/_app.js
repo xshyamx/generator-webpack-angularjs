@@ -43,16 +43,7 @@ importAll(require.context('./services', false, /\.js$/));
 
 // routers
 importAll(require.context('./login', false, /.js$/))
-/*
-importAll(require.context('./home', false, /.js$/))
-importAll(require.context('./dashboard', false, /.js$/))
-importAll(require.context('./reports', false, /.js$/))
-importAll(require.context('./assessment', false, /.js$/))
-importAll(require.context('./admin', false, /.js$/))
-importAll(require.context('./analysis', false, /.js$/))
-importAll(require.context('./migration', false, /.js$/))
-importAll(require.context('./service-catalog', false, /.js$/))
-*/
+importAll(require.context('./home', true, /.js$/))
 
 angular.module('<%= moduleName %>')
   .run(['$rootScope', '$location', '$sessionStorage', addAuthGuard])

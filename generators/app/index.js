@@ -49,7 +49,8 @@ module.exports = class extends Generator {
       default: this.user.git.email()
     }, {
       name: 'apiHost',
-      message: 'API hostname'
+      message: 'API hostname',
+      default: 'httpbin.org'
     }];
 
     return this.prompt(prompts).then(props => {
@@ -128,6 +129,22 @@ module.exports = class extends Generator {
     this.fs.copyTpl(
       this.templatePath('_login.css'),
       this.destinationPath('src/css/login.css'),
+      this.props
+    )
+    // home
+    this.fs.copyTpl(
+      this.templatePath('_home.ctrl.js'),
+      this.destinationPath('src/home/home.js'),
+      this.props
+    )
+    this.fs.copyTpl(
+      this.templatePath('_navbar.html'),
+      this.destinationPath('src/includes/navbar.html'),
+      this.props
+    )
+    this.fs.copyTpl(
+      this.templatePath('_home.html'),
+      this.destinationPath('src/home/home.html'),
       this.props
     )
     /*

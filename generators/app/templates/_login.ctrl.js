@@ -25,6 +25,7 @@ function loginCtrl($scope, $sessionStorage, $state, $filter, LoginSvc) {
           $scope.message = err;
         })
     }
+  }
 }
 
 var stateConfig = {

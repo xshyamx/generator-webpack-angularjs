@@ -29,7 +29,7 @@ let webpackConfig = {
         test: /\.css$/,
         use: [
           'style-loader',
-          {
+         {
             loader: 'css-loader',
             options: {
               minify: isProdBuild
