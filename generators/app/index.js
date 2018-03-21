@@ -115,6 +115,17 @@ module.exports = class extends Generator {
       this.destinationPath('src/filters/title-case.js'),
       this.props
     )
+    // directive
+    this.fs.copyTpl(
+      this.templatePath('_directive.js'),
+      this.destinationPath(`src/directives/${this.props.moduleName}-table.js`),
+      this.props
+    )
+    this.fs.copyTpl(
+      this.templatePath('_directive.html'),
+      this.destinationPath(`src/directives/${this.props.moduleName}-table.html`),
+      this.props
+    )
     this.fs.copyTpl(
       this.templatePath('_login.service.js'),
       this.destinationPath('src/services/login.js'),
@@ -150,6 +161,11 @@ module.exports = class extends Generator {
     this.fs.copyTpl(
       this.templatePath('_home.html'),
       this.destinationPath('src/home/home.html'),
+      this.props
+    )
+    this.fs.copyTpl(
+      this.templatePath('_home.css'),
+      this.destinationPath('src/css/home.css'),
       this.props
     )
     /*

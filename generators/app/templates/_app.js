@@ -44,7 +44,7 @@ importAll(require.context('./services', false, /\.js$/));
 importAll(require.context('./filters', false, /\.js$/));
 
 // directives
-//importAll(require.context('./directives', false, /\.js$/))
+importAll(require.context('./directives', false, /\.js$/))
 
 // routers
 importAll(require.context('./login', false, /.js$/))
