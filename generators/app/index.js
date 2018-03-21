@@ -182,7 +182,7 @@ module.exports = class extends Generator {
   }
 
   install() {
-    this.config.set('app', this.props.app);
+    this.config.set('app', this.props.appName);
     this.config.set('module', this.props.moduleName);
     this.config.set('services', ['LoginSvc']);
     this.config.set('directives', ['titlecase']);

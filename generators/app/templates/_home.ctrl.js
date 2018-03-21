@@ -6,6 +6,14 @@ require('../css/home.css')
 function homeCtrl($scope, $sessionStorage, $state, $filter, LoginSvc) {
   $scope.title = '<%= appName %>';
   $scope.navBar = require('../includes/navbar.html')
+  $scope.links = $state.get()
+    .filter(x => x.name.startsWith('home.'))
+    .map(x => {
+      return {
+        title: x.url.slice(1),
+        link: $state.href(x.name)
+      }
+    });
   $scope.tableData = [
     ['#', 'Header', 'Header', 'Header', 'Header' ],
     ["1001","Lorem","ipsum","dolor","sit"],
