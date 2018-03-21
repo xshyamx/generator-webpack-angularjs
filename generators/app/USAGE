@@ -1,0 +1,26 @@
+Description:
+    Creates a default AngularJS app with login and home page using webpack build
+
+Example:
+    yo webpack-angular --module mod
+
+    This will create:
+        .gitignore
+        .env
+        package.json
+        webpack.config.js
+        README.md
+        src/index.html
+        src/app.js
+        src/constants.js                                                      
+        src/filters/title-case.js                           
+        src/directives/<module>-table.js
+        src/directives/<module>-table.html                                     
+        src/services/login.js                                                 
+        src/login/login.js
+        src/login/login.html                                  
+        src/css/login.css                                                     
+        src/home/home.js                                                 
+        src/includes/navbar.html
+        src/home/home.html                   
+        src/css/home.css

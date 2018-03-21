@@ -1,0 +1,8 @@
+Description:
+    Creates a new Angular service. Prompts for the service name. Picks app and module from .yo-rc.json
+
+Example:
+    yo webpack-angularjs:service
+
+    This will create:
+        src/services/<service-name>.js

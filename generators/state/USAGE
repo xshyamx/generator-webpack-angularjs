@@ -1,0 +1,9 @@
+Description:
+    Creates a new ui-router state with corresponding template and controller
+
+Example:
+    yo webpack-angularjs:state --state dashboard --parent home
+
+    This will create:
+        src/home/dashboard/dashboard.js
+        src/home/dashboard/dashboard.html
