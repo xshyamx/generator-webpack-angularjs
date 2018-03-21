@@ -1,6 +1,6 @@
 {
   "name": "generator-webpack-angularjs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Creating an AngularJS + UI-Router app with Webpack",
   "homepage": "",
   "author": {
