@@ -5,7 +5,7 @@ function <%= moduleName %>Table(){
     scope: {
       rows: '=data'
     },
-    templateUrl: require('./cmp-table.html'),
+    templateUrl: require('./<%= moduleName %>-table.html'),
     link: function(scope, element, attrs, controller, transcludeFn){
       var unwatch = scope.$watch('rows', (nv, ov) => {
         if ( !!nv ) {
@@ -25,7 +25,7 @@ angular.module('<%= moduleName %>')
   .directive('<%= moduleName %>Table', <%= moduleName %>Table)
 
 module.exports = {
-  name: 'cmpTable',
-  directive: cmpTable
+  name: '<%= moduleName %>Table',
+  directive: <%= moduleName %>Table
 }
 

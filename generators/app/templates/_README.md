@@ -18,21 +18,17 @@ For development
 
 1. Create a `.env` file with the value of API_HOST to point to a host that is serving the API's
    ```sh
-   API_HOST=ec2-18-219-25-51.us-east-2.compute.amazonaws.com
+   API_HOST=httpbin.org
    ```
 2. Update `wbepack.config.js` to update the ports and url prefixes for proxying from the remote API host
    ```json
    {
      //...
      proxy: {
-       "/node": {
-         target: `http://${apiHost}/cmp/v1/`,
-         pathRewrite: { "^/node": "" },
-         agent: proxyAgent
-       },
-       "/java": {
-         target: `http://${apiHost}/cmp/v2/`,
-         pathRewrite: { "^/java": "" },
+       "/api": {
+         changeOrigin: true,
+         target: `http://${apiHost}//`,
+         pathRewrite: { "^/api": "" },
          agent: proxyAgent
        }
      }

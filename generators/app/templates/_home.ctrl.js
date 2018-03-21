@@ -60,7 +60,7 @@ function routeConfig($stateProvider) {
   $stateProvider.state(stateConfig)
 }
 
-angular.module('cmp')
+angular.module('<%= moduleName %>')
   .controller('homeCtrl', homeCtrl)
   .config([ '$stateProvider', routeConfig ])
 
