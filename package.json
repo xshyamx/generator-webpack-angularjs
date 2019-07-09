@@ -22,29 +22,27 @@
     "font-awesome"
   ],
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.4.0",
-    "eslint-config-xo": "^0.20.1",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-xo": "^0.26.0",
     "eslint-plugin-prettier": "^2.2.0",
-    "husky": "^0.14.3",
-    "jest": "^22.4.4",
-    "lint-staged": "^7.1.2",
-    "nsp": "^3.2.1",
-    "prettier": "^1.12.1",
+    "husky": "^3.0.0",
+    "jest": "^24.8.0",
+    "lint-staged": "^9.1.0",
+    "prettier": "^1.18.2",
     "yeoman-assert": "^3.1.1",
-    "yeoman-test": "^1.7.2"
+    "yeoman-test": "^2.0.0"
   },
   "dependencies": {
-    "chalk": "^2.4.1",
+    "chalk": "^2.4.2",
     "mkdirp": "^0.5.1",
-    "yeoman-generator": "^2.0.5",
+    "yeoman-generator": "^4.0.1",
     "yosay": "^2.0.2"
   },
   "jest": {
     "testEnvironment": "node"
   },
   "scripts": {
-    "prepublish": "nsp check",
     "precommit": "lint-staged",
     "test": "jest"
   },
