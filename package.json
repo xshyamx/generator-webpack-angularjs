@@ -1,8 +1,8 @@
 {
   "name": "generator-webpack-angularjs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Creating an AngularJS + UI-Router app with Webpack",
-  "homepage": "",
+  "homepage": "https://github.com/xshyamx/generator-webpack-angularjs",
   "author": {
     "name": "shyam",
     "email": "xshyamx@gmail.com",
@@ -78,6 +78,6 @@
       "prettier"
     ]
   },
-  "repository": "http://github.com/xshyamx/generator-webpack-angularjs.git",
+  "repository": "https://github.com/xshyamx/generator-webpack-angularjs.git",
   "license": "Apache-2.0"
 }
